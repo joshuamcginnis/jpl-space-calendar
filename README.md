@@ -1,7 +1,5 @@
 JPL Space Calendar Parser
 =====
-This is the repo for the [http://jpl.mcginnis.io](http://jpl.mcginnis.io) app.
-
 This app parses the [JPL Space Calendar](https://www2.jpl.nasa.gov/calendar/) and publishes the calendar in the following formats:
 
 * **JSON**: [http://jpl.mcginnis.io/space_calendar.json](http://jpl.mcginnis.io/space_calendar.json)
