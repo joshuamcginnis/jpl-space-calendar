@@ -1,17 +1,8 @@
-FROM ruby:2.5.1-alpine
+FROM ruby:2.5.1
 LABEL maintainer="joshua@mcginnis.io"
 
-# install base packages and remove apk cache after
-RUN apk update && \
-    apk upgrade --available && \
-    apk add --update \
-      build-base \
-      libxml2-dev \
-      libxslt-dev \
-      && \
-    rm -rf /var/cache/apk/*
+RUN apt-get update
 
-# install bundler & install gems from cache
 WORKDIR /tmp
 ADD ./Gemfile Gemfile
 ADD ./Gemfile.lock Gemfile.lock
@@ -22,4 +13,6 @@ WORKDIR /app
 ADD . /app
 
 EXPOSE 4567
-CMD ["ruby", "app.rb", "-o", "0.0.0.0", "-s", "Puma"]
+EXPOSE 9292
+
+CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]

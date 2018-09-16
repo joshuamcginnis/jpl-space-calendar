@@ -21,5 +21,3 @@ class App < Sinatra::Application
     body settings.calendar.to_json
   end
 end
-
-App.run!
