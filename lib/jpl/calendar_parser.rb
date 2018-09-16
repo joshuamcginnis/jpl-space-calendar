@@ -7,7 +7,7 @@ module JPL
   class CalendarParser
     CALENDAR_URL = 'https://www2.jpl.nasa.gov/calendar/'.freeze
     DATE_FORMAT = '%Y %b %d'.freeze
-    CACHE_EXPIRY = 5.minutes
+    CACHE_EXPIRY = 1.hour
 
     def initialize
       @cache = ActiveSupport::Cache::MemoryStore.new(expires_in: CACHE_EXPIRY)
@@ -25,8 +25,6 @@ module JPL
         ical_event.description = event[:url]
 
         ical.add_event(ical_event)
-      rescue NoMethodError => e
-        binding.pry
       end
 
       ical.to_ical
