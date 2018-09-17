@@ -36,3 +36,15 @@ This app parses the [JPL Space Calendar](https://www2.jpl.nasa.gov/calendar/) an
 ### Additional Helpful Links
 * [Import Events to Google Calendar from URL](https://support.google.com/calendar/answer/37118?hl=en)
 * [Import or Subscribe to a Calendar in Outlook.com](https://support.office.com/en-us/article/Import-or-subscribe-to-a-calendar-in-Outlook-com-cff1429c-5af6-41ec-a5b4-74f2c278e98c)
+
+### Docker Notes
+```bash
+docker run -d -p 443:9292 \
+-v /etc/letsencrypt:/etc/letsencrypt \
+-e RACK_ENV=production \
+-e SSL_KEY_PATH=/etc/letsencrypt/live/jpl.mcginnis.io/privkey.pem \
+-e SSL_CERT_PATH=/etc/letsencrypt/live/jpl.mcginnis.io/fullchain.pem \
+joshuamcginnis/jpl-space-calendar:latest
+
+docker run -p 80:4567 -d joshuamcginnis/jpl-space-calendar
+```
