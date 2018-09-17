@@ -5,6 +5,7 @@ class App < Sinatra::Application
   configure do
     enable :logging
     set calendar: JPL::CalendarParser.new
+    set :protection, :except => :json_csrf
   end
 
   get '/' do
