@@ -95,6 +95,8 @@ module JPL
       if matches = event_text.match(/\[(.*)\]/)
         return Date.strptime("#{event_year} #{matches[1]}", DATE_FORMAT)
       end
+    rescue
+      nil
     end
 
     def parse_event_link(event)
