@@ -19,7 +19,7 @@ GEM
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     puma (3.12.6)
-    rack (2.2.2)
+    rack (2.2.3)
     rack-protection (2.0.8.1)
       rack
     ruby2_keywords (0.0.2)
