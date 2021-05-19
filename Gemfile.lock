@@ -12,13 +12,15 @@ GEM
     icalendar (2.6.1)
       ice_cube (~> 0.16)
     ice_cube (0.16.3)
-    mini_portile2 (2.4.0)
+    mini_portile2 (2.5.1)
     minitest (5.14.1)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
-    nokogiri (1.10.9)
-      mini_portile2 (~> 2.4.0)
+    nokogiri (1.11.4)
+      mini_portile2 (~> 2.5.0)
+      racc (~> 1.4)
     puma (3.12.6)
+    racc (1.5.2)
     rack (2.2.3)
     rack-protection (2.0.8.1)
       rack
@@ -39,7 +41,7 @@ PLATFORMS
 DEPENDENCIES
   activesupport (~> 5.2, >= 5.2.2)
   icalendar (~> 2.5, >= 2.5.2)
-  nokogiri (~> 1.10, >= 1.10.1)
+  nokogiri (~> 1.11)
   puma (~> 3.12)
   sinatra (~> 2.0, >= 2.0.5)
 
