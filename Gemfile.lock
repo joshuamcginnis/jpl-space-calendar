@@ -17,9 +17,6 @@ GEM
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.8)
-    nokogiri (1.12.5)
-      mini_portile2 (~> 2.6.1)
-      racc (~> 1.4)
     puma (4.3.12)
       nio4r (~> 2.0)
     racc (1.5.2)
@@ -43,7 +40,7 @@ PLATFORMS
 DEPENDENCIES
   activesupport (~> 5.2, >= 5.2.2)
   icalendar (~> 2.5, >= 2.5.2)
-  nokogiri (~> 1.12)
+  nokogiri (~> 1.13, >= 1.13.4)
   puma (~> 4.3)
   sinatra (~> 2.0, >= 2.0.5)
 
